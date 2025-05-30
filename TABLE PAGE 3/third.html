@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE BOOKING</title>
+
+    <!-- style sheet  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style sheet  -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- google font  -->
+
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/4b4d66f7f6.js" crossorigin="anonymous"></script>
+    <!-- fontawesome  -->
+
+    <!-- bootsrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- bootsrap  -->
+
+</head>
+
+<body>
+
+  <!-- desktop parent start  -->
+  <div class="parent">
+
+    <!-- left child 1 start  -->
+    <div class="left-child">
+
+      <!-- child 1 start -->
+      <div class="child-1">
+
+        <div class="child-1-left">
+          <button class="three-btn" id="all-btn" onclick="all_table()">All Table</button>
+          <button class="three-btn" id="available-btn" onclick="available()">Available</button>
+          <button class="three-btn" id="booked-btn" onclick="booked()">Booked</button>
+        </div>
+
+        <div class="child-1-right">
+          <p><span class="green">●</span> Available</p>
+          <p><span class="blue">●</span>Selected</p>
+          <p><span class="red">●</span> Reserved</p>
+          <p><span class="yellow">●</span> Available Soon</p>
+        </div>
+
+      </div>
+      <!-- child 1 end -->
+       
+    <!-- child 2 start  -->
+    <div class="child-2">  
+
+      <div class="hotel-view">
+        <p>HOTEL VIEW</p>
+      </div>
+
+      <!-- sub child 2 start -->
+      <div class="sub-child-2">
+
+        <!-- column 1 start -->
+        <div class="column-1">
+
+          <!-- nine table start -->
+          <div class="ninth-table" id="ninth-table">
+            <div class="nine-top" id="ninth-chair-1">1</div>
+
+            <div class="nine-middle">
+              <div class="nine-middle-1" id="ninth-chair-2">2</div>
+              <div class="nine-middle-2" id="ninth-desk"><input type="checkbox" id="ninth-check">T-9</div>
+              <div class="nine-middle-3" id="ninth-chair-3">3</div>
+            </div>
+
+            <div class="nine-bottom" id="ninth-chair-4">4</div>
+          </div>
+          
+
+          <script>
+            const nine_checkbox = document.getElementById('ninth-check');
+            const nine_top = document.getElementById('ninth-chair-1');
+            const nine_middle_one = document.getElementById('ninth-chair-2');
+            const nine_middle_two = document.getElementById('ninth-desk');
+            const nine_middle_three = document.getElementById('ninth-chair-3');
+            const nine_bottom = document.getElementById('ninth-chair-4');
+
+            nine_checkbox.addEventListener('change', () => {
+              if (nine_checkbox.checked) {
+                nine_top.style.borderTopColor = '#007ab3';
+                nine_middle_one.style.borderLeftColor = '#007ab3';
+                nine_middle_two.style.backgroundColor = '#007ab3';
+                nine_middle_three.style.borderRightColor = '#007ab3';
+                nine_bottom.style.borderBottomColor = '#007ab3';
+              }
+              else 
+              {
+                nine_top.style.borderTopColor = '';
+                nine_middle_one.style.borderLeftColor = '';
+                nine_middle_two.style.backgroundColor = '';
+                nine_middle_three.style.borderRightColor = '';
+                nine_bottom.style.borderBottomColor = '';
+              }
+
+            });
+          </script>
+          <!-- nine table end -->
+
+
+
+            <!-- six table start -->
+            <div class="sixth-table">
+              <div class="six-top" id="sixth-chair-1">1</div>
+
+              <div class="six-middle">
+                <div class="sub-six-middle-1">
+                  <div class="six-middle-1" id="sixth-chair-2">2</div>
+                  <div class="six-middle-1" id="sixth-chair-3">3</div>
+                  <div class="six-middle-1" id="sixth-chair-4">4</div>
+                </div>
+                <div class="six-middle-2" id="sixth-desk"><input type="checkbox" id="sixth-check">T-6</div>
+                <div class="sub-six-middle-2">
+                  <div class="six-middle-3" id="sixth-chair-5">5</div>
+                  <div class="six-middle-3" id="sixth-chair-6">6</div>
+                  <div class="six-middle-3" id="sixth-chair-7">7</div>
+                </div>
+              </div>
+
+              <div class="six-bottom" id="sixth-chair-8">8</div>
+            </div>
+
+            <script>
+              const six_checkbox       = document.getElementById('sixth-check');
+              const six_top            = document.getElementById('sixth-chair-1');
+              const six_middle_one_1   = document.getElementById('sixth-chair-2');
+              const six_middle_one_2   = document.getElementById('sixth-chair-3');
+              const six_middle_one_3   = document.getElementById('sixth-chair-4');
+              const six_middle_two     = document.getElementById('sixth-desk');
+              const six_middle_three_1 = document.getElementById('sixth-chair-5');
+              const six_middle_three_2 = document.getElementById('sixth-chair-6');
+              const six_middle_three_3 = document.getElementById('sixth-chair-7');
+              const six_bottom         = document.getElementById('sixth-chair-8');
+
+              six_checkbox.addEventListener('change', () => {
+
+                if (six_checkbox.checked) 
+                {
+                  six_top.style.borderTopColor              = '#007ab3';
+                  six_middle_one_1.style.borderLeftColor    = '#007ab3';
+                  six_middle_one_2.style.borderLeftColor    = '#007ab3';
+                  six_middle_one_3.style.borderLeftColor    = '#007ab3';
+                  six_middle_two.style.backgroundColor      = '#007ab3';
+                  six_middle_three_1.style.borderRightColor = '#007ab3';
+                  six_middle_three_2.style.borderRightColor = '#007ab3';
+                  six_middle_three_3.style.borderRightColor = '#007ab3';
+                  six_bottom.style.borderBottomColor        = '#007ab3';
+                }
+                else 
+                {
+                  six_top.style.borderTopColor              = '';
+                  six_middle_one_1.style.borderLeftColor    = '';
+                  six_middle_one_2.style.borderLeftColor    = '';
+                  six_middle_one_3.style.borderLeftColor    = '';
+                  six_middle_two.style.backgroundColor      = '';
+                  six_middle_three_1.style.borderRightColor = '';
+                  six_middle_three_2.style.borderRightColor = '';
+                  six_middle_three_3.style.borderRightColor = '';
+                  six_bottom.style.borderBottomColor        = '';
+                }
+
+              });
+            </script>
+            <!-- six table end -->
+
+
+
+            <!-- three - four table start -->
+            <div class="three-four-table">
+
+              <!-- third table start -->
+              <div class="third-table">
+                  <div class="three-middle-1" id="third-chair-1">1</div>
+                  <div class="three-middle-2" id="third-desk"><input type="checkbox" id="third-check">T-3</div>
+                  <div class="three-middle-3" id="third-chair-2">2</div>
+              </div>
+
+              <script>
+                const three_checkbox     = document.getElementById('third-check');
+                const three_middle_one   = document.getElementById('third-chair-1');
+                const three_middle_two   = document.getElementById('third-desk');
+                const three_middle_three = document.getElementById('third-chair-2');
+
+                three_checkbox.addEventListener('change', () => {
+
+                  if(three_checkbox.checked)
+                  {
+                    three_middle_one.style.borderLeftColor    = '#007ab3';
+                    three_middle_two.style.backgroundColor    = '#007ab3';
+                    three_middle_three.style.borderRightColor = '#007ab3';
+                  }
+                  else 
+                  {
+                    three_middle_one.style.borderLeftColor    = '';
+                    three_middle_two.style.backgroundColor    = '';
+                    three_middle_three.style.borderRightColor = '';
+                  }
+
+                });
+              </script>
+              <!-- third table end -->
+
+
+
+              <!-- fourth table start -->
+              <div class="fourth-table">
+                  <div class="four-middle-1" id="fourth-chair-1">1</div>
+                  <div class="four-middle-2"><input type="checkbox" disabled>T-4</div>
+                  <div class="four-middle-3" id="fourth-chair-2">2</div>
+              </div>
+              <!-- fourth table end -->
+
+            </div>
+            <!-- three - four tables end -->
+
+
+
+            <!-- first table start -->
+            <div class="first-table">
+              <div class="one-top" id="first-chair-1">1</div>
+
+              <div class="one-middle">
+                <div class="one-middle-1" id="first-chair-2">2</div>
+                <div class="one-middle-2"><input type="checkbox" disabled>T-1</div>
+                <div class="one-middle-3" id="first-chair-3">3</div>
+              </div>
+
+              <div class="one-bottom" id="first-chair-4">4</div>
+            </div>
+            <!-- first table end -->
+
+
+
+            <!-- <div class="reception">
+              <p>R<br>e<br>c<br>e<br>p<br>t<br>i<br>o<br>n</p>
+            </div> -->
+
+        </div>
+        <!-- column 1 end -->
+        
+        <div class="column-2">
+
+            <!-- eight table start -->
+            <div class="eighth-table">
+              <div class="eight-top" id="eighth-chair-1">1</div>
+
+              <div class="eight-middle">
+                <div class="sub-eight-middle-1">
+                  <div class="eight-middle-1" id="eighth-chair-2">2</div>
+                  <div class="eight-middle-1" id="eighth-chair-3">3</div>
+                  <div class="eight-middle-1" id="eighth-chair-4">4</div>
+                </div>
+                <div class="eight-middle-2" id="eighth-desk"><input type="checkbox" id="eighth-check">T-8</div>
+                <div class="sub-eight-middle-2">
+                  <div class="eight-middle-3" id="eighth-chair-5">5</div>
+                  <div class="eight-middle-3" id="eighth-chair-6">6</div>
+                  <div class="eight-middle-3" id="eighth-chair-7">7</div>
+                </div>
+              </div>
+
+              <div class="eight-bottom" id="eighth-chair-8">8</div>
+            </div>
+
+
+            <script>
+              const eight_checkbox       = document.getElementById('eighth-check');
+              const eight_top            = document.getElementById('eighth-chair-1');
+              const eight_middle_one_1   = document.getElementById('eighth-chair-2');
+              const eight_middle_one_2   = document.getElementById('eighth-chair-3');
+              const eight_middle_one_3   = document.getElementById('eighth-chair-4');
+              const eight_middle_two     = document.getElementById('eighth-desk');
+              const eight_middle_three_1 = document.getElementById('eighth-chair-5');
+              const eight_middle_three_2 = document.getElementById('eighth-chair-6');
+              const eight_middle_three_3 = document.getElementById('eighth-chair-7');
+              const eight_bottom         = document.getElementById('eighth-chair-8');
+
+              eight_checkbox.addEventListener('change', () => {
+
+                if (eight_checkbox.checked) 
+                {
+                  eight_top.style.borderTopColor              = '#007ab3';
+                  eight_middle_one_1.style.borderLeftColor    = '#007ab3';
+                  eight_middle_one_2.style.borderLeftColor    = '#007ab3';
+                  eight_middle_one_3.style.borderLeftColor    = '#007ab3';
+                  eight_middle_two.style.backgroundColor      = '#007ab3';
+                  eight_middle_three_1.style.borderRightColor = '#007ab3';
+                  eight_middle_three_2.style.borderRightColor = '#007ab3';
+                  eight_middle_three_3.style.borderRightColor = '#007ab3';
+                  eight_bottom.style.borderBottomColor        = '#007ab3';
+                }
+                else 
+                {
+                  eight_top.style.borderTopColor              = '';
+                  eight_middle_one_1.style.borderLeftColor    = '';
+                  eight_middle_one_2.style.borderLeftColor    = '';
+                  eight_middle_one_3.style.borderLeftColor    = '';
+                  eight_middle_two.style.backgroundColor      = '';
+                  eight_middle_three_1.style.borderRightColor = '';
+                  eight_middle_three_2.style.borderRightColor = '';
+                  eight_middle_three_3.style.borderRightColor = '';
+                  eight_bottom.style.borderBottomColor        = '';
+                }
+
+              });
+            </script>
+            <!-- eight table end -->
+
+
+
+            <!-- seventh table start -->
+              <div class="seventh-table">
+
+                <div class="seven-middle">
+                  <div class="sub-seven-middle-1">
+                    <div class="seven-middle-1" id="seventh-chair-1">1</div>
+                    <div class="seven-middle-1" id="seventh-chair-2">2</div>
+                  </div>
+
+                  <div class="seven-middle-2" id="seventh-desk"><input type="checkbox" id="seventh-check">T-7</div>
+
+                  <div class="sub-seven-middle-2">
+                    <div class="seven-middle-3" id="seventh-chair-3">3</div>
+                    <div class="seven-middle-3" id="seventh-chair-4">4</div>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <script>
+              const seven_checkbox       = document.getElementById('seventh-check');
+              const seven_middle_one_1   = document.getElementById('seventh-chair-1');
+              const seven_middle_one_2   = document.getElementById('seventh-chair-2');
+              const seven_middle_two     = document.getElementById('seventh-desk');
+              const seven_middle_three_1 = document.getElementById('seventh-chair-3');
+              const seven_middle_three_2 = document.getElementById('seventh-chair-4');
+
+              seven_checkbox.addEventListener('change', () => {
+
+                if (seven_checkbox.checked) 
+                {
+                  seven_middle_one_1.style.borderLeftColor    = '#007ab3';
+                  seven_middle_one_2.style.borderLeftColor    = '#007ab3';
+                  seven_middle_two.style.backgroundColor      = '#007ab3';
+                  seven_middle_three_1.style.borderRightColor = '#007ab3';
+                  seven_middle_three_2.style.borderRightColor = '#007ab3';
+                }
+                else 
+                {
+                  seven_middle_one_1.style.borderLeftColor    = '';
+                  seven_middle_one_2.style.borderLeftColor    = '';
+                  seven_middle_two.style.backgroundColor      = '';
+                  seven_middle_three_1.style.borderRightColor = '';
+                  seven_middle_three_2.style.borderRightColor = '';
+                }
+
+              });
+            </script>
+              <!-- seventh table end -->
+
+
+
+            <!-- fifth table start -->
+            <div class="fifth-table">
+              <div class="five-top" id="fifth-chair-1">1</div>
+
+              <div class="five-middle">
+                <div class="five-middle-1" id="fifth-chair-2">2</div>
+                <div class="five-middle-2" id="fifth-desk"><input type="checkbox" id="fifth-check">T-5</div>
+                <div class="five-middle-3" id="fifth-chair-3">3</div>
+              </div>
+
+              <div class="five-bottom" id="fifth-chair-4">4</div>
+            </div>
+
+
+            <script>
+              const five_checkbox = document.getElementById('fifth-check');
+              const five_top = document.getElementById('fifth-chair-1');
+              const five_middle_one = document.getElementById('fifth-chair-2');
+              const five_middle_two = document.getElementById('fifth-desk');
+              const five_middle_three = document.getElementById('fifth-chair-3');
+              const five_bottom = document.getElementById('fifth-chair-4');
+
+              five_checkbox.addEventListener('change', () => {
+                if (five_checkbox.checked) {
+                  five_top.style.borderTopColor = '#007ab3';
+                  five_middle_one.style.borderLeftColor = '#007ab3';
+                  five_middle_two.style.backgroundColor = '#007ab3';
+                  five_middle_three.style.borderRightColor = '#007ab3';
+                  five_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  five_top.style.borderTopColor = '';
+                  five_middle_one.style.borderLeftColor = '';
+                  five_middle_two.style.backgroundColor = '';
+                  five_middle_three.style.borderRightColor = '';
+                  five_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- fifth table end -->
+
+
+
+            <!-- second table start -->
+              <div class="second-table">
+                <div class="two-top" id="second-chair-1">1</div>
+
+                <div class="two-middle">
+                  <div class="two-middle-1" id="second-chair-2">2</div>
+                  <div class="two-middle-2" id="second-desk"><input type="checkbox" id="second-check">T-2</div>
+                  <div class="two-middle-3" id="second-chair-3">3</div>
+                </div>
+
+                <div class="two-bottom" id="second-chair-4">4</div>
+              </div>
+
+
+              <script>
+              const two_checkbox = document.getElementById('second-check');
+              const two_top = document.getElementById('second-chair-1');
+              const two_middle_one = document.getElementById('second-chair-2');
+              const two_middle_two = document.getElementById('second-desk');
+              const two_middle_three = document.getElementById('second-chair-3');
+              const two_bottom = document.getElementById('second-chair-4');
+
+              two_checkbox.addEventListener('change', () => {
+                if (two_checkbox.checked) {
+                  two_top.style.borderTopColor = '#007ab3';
+                  two_middle_one.style.borderLeftColor = '#007ab3';
+                  two_middle_two.style.backgroundColor = '#007ab3';
+                  two_middle_three.style.borderRightColor = '#007ab3';
+                  two_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  two_top.style.borderTopColor = '';
+                  two_middle_one.style.borderLeftColor = '';
+                  two_middle_two.style.backgroundColor = '';
+                  two_middle_three.style.borderRightColor = '';
+                  two_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+              <!-- second table end -->
+
+              <div class="entrance">
+                <p>Entrance</p>
+              </div>
+
+        </div>
+        <!-- column 2 end -->
+
+        <div class="column-3">
+          <p>KITCHEN</p>
+        </div>
+
+        </div>
+        <!-- sub child 2 end -->
+
+      </div>
+      <!-- child 2 end -->
+
+    </div>
+    <!-- left child end -->
+
+    
+
+    <!-- right child start  -->
+    <div class="right-child">
+
+      <div class="sub-right-child">
+
+        <p class="book-table-text">Book Your Table</p>
+
+        <div class="small-box">
+          <img src="./Images/hotel.png" alt="">
+          <div class="sub-small-box">
+            <p class="table-text">BALAJI HOTEL</p>
+            <p class="order-text">Madurai</p>
+          </div>
+        </div>   
+
+        <div class="nine-boxes">
+            <button onclick="table_one_btn()">T-01</button> 
+            <button onclick="table_two_btn()">T-02</button>
+            <button onclick="table_three_btn()">T-03</button>
+            <button onclick="table_four_btn()">T-04</button>
+            <button onclick="table_five_btn()">T-05</button>
+            <button onclick="table_six_btn()">T-06</button>
+            <button onclick="table_seven_btn()">T-07</button>
+            <button onclick="table_eight_btn()">T-08</button>
+            <button onclick="table_nine_btn()">T-09</button>
+        </div>
+
+        <!-- seat - position start -->
+        <div class="seat-table-position">
+          <p><i class="fa-solid fa-chair" style="color: #4d0089;"></i> Seats : 4 | Table No : 6</p>
+          <p><i class="fa-solid fa-circle-play" style="color: #4d0089;"></i> Watch table Position</p>
+        </div>
+        <!-- seat - position end -->
+
+        <!-- button start -->
+        <a href="" class="book-your-table">Book Your Table</a>
+        <!-- button end -->
+      
+      </div>
+
+    </div>
+    <!-- right child end -->
+
+  </div>
+  <!-- desktop parent end -->
+
+
+
+
+
+
+
+
+
+  <!-- mobile parent start -->
+    <div class="mobile-parent">
+
+      <!-- child 1 start  -->
+      <div class="mobile-child-1">
+          <div class="mobile-sub-child-1">
+              <a href="../TABLE PAGE 2/second.html" class="mobile-sub-child-text-1">〱</a>
+              <p class="mobile-sub-child-text-2">BALAJI HOTEL <span>Madurai</span></p>
+              <p class="mobile-sub-child-text-3"></p>
+          </div>
+
+          <div class="table-seats">
+            <button id="two-seat" onclick="two_seats()">2 Seats</button>
+            <button id="three-seat" onclick="three_seats()">3 Seats</button>
+            <button id="four-seat" onclick="four_seats()">4 Seats</button>
+            <button id="five-seat" onclick="five_seats()">5 Seats</button>
+            <button id="six-seat" onclick="six_seats()">6 Seats</button>
+          </div>
+
+          <div class="mobile-image">
+            <img src="./Images/curve.png" alt="">
+          </div>
+
+          <p class="book-table">Book a Table</p>
+
+          <div class="mobile-child-1-right">
+          <p><span class="green">●</span> Available</p>
+          <!-- <p><span class="blue">●</span>Selected</p> -->
+          <p><span class="red">●</span> Reserved</p>
+          <p><span class="yellow">●</span> Available Soon</p>
+        </div>
+
+
+      <!-- child 1 end  -->
+
+
+
+
+      
+
+
+
+
+      <!-- child 2 start  -->
+    <div class="child-2">  
+
+      <!-- <div class="hotel-view">
+        <p>HOTEL VIEW</p>
+      </div> -->
+
+      <!-- sub child 2 start -->
+      <div class="sub-child-2">
+
+        <!-- <div class="column-3">
+          <p>K
+            I
+            T
+            C
+            H
+            E
+            N</p>
+        </div> -->
+
+
+        <div class="column-2">
+
+            <!-- eight table start -->
+            <div class="mobile-eighth-table">
+
+              <div class="mobile-eight-top">
+                <div class="mobile-eight-top-1" id="mobile-eighth-chair-1">1</div>
+                <div class="mobile-eight-top-2" id="mobile-eighth-chair-2">2</div>
+                <div class="mobile-eight-top-3" id="mobile-eighth-chair-3">3</div>
+              </div>
+
+              <div class="mobile-eight-middle">
+                  <div class="mobile-eight-middle-1" id="mobile-eighth-chair-4">4</div>
+                  <div class="mobile-eight-middle-2" id="mobile-eighth-desk"><input type="checkbox" id="mobile-eighth-check">T-8</div>
+                  <div class="mobile-eight-middle-3" id="mobile-eighth-chair-5">5</div>
+              </div>
+                
+              <div class="mobile-eight-bottom">
+                <div class="mobile-eight-bottom-1" id="mobile-eighth-chair-6">6</div>
+                <div class="mobile-eight-bottom-2" id="mobile-eighth-chair-7">7</div>
+                <div class="mobile-eight-bottom-3" id="mobile-eighth-chair-8">8</div>
+              </div>
+
+            </div>
+
+
+            <script>
+              const mobile_eight_checkbox     = document.getElementById('mobile-eighth-check');
+              const mobile_eight_top_one      = document.getElementById('mobile-eighth-chair-1');
+              const mobile_eight_top_two      = document.getElementById('mobile-eighth-chair-2');
+              const mobile_eight_top_three    = document.getElementById('mobile-eighth-chair-3');
+              const mobile_eight_middle_one   = document.getElementById('mobile-eighth-chair-4');
+              const mobile_eight_middle_two   = document.getElementById('mobile-eighth-desk');
+              const mobile_eight_middle_three = document.getElementById('mobile-eighth-chair-5');
+              const mobile_eight_bottom_one   = document.getElementById('mobile-eighth-chair-6');
+              const mobile_eight_bottom_two   = document.getElementById('mobile-eighth-chair-7');
+              const mobile_eight_bottom_three = document.getElementById('mobile-eighth-chair-8');
+
+
+              mobile_eight_checkbox.addEventListener('change', () => {
+                if (mobile_eight_checkbox.checked) {
+                  mobile_eight_top_one.style.borderTopColor = '#007ab3';
+                  mobile_eight_top_two.style.borderTopColor = '#007ab3';
+                  mobile_eight_top_three.style.borderTopColor = '#007ab3';
+                  mobile_eight_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_eight_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_eight_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_eight_bottom_one.style.borderBottomColor = '#007ab3';
+                  mobile_eight_bottom_two.style.borderBottomColor = '#007ab3';
+                  mobile_eight_bottom_three.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_eight_top_one.style.borderTopColor = '';
+                  mobile_eight_top_two.style.borderTopColor = '';
+                  mobile_eight_top_three.style.borderTopColor = '';
+                  mobile_eight_middle_one.style.borderLeftColor = '';
+                  mobile_eight_middle_two.style.backgroundColor = '';
+                  mobile_eight_middle_three.style.borderRightColor = '';
+                  mobile_eight_bottom_one.style.borderBottomColor = '';
+                  mobile_eight_bottom_two.style.borderBottomColor = '';
+                  mobile_eight_bottom_three.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- eight table end -->
+
+
+
+            <!-- seventh table start -->
+              <div class="mobile-seventh-table">
+                  <div class="mobile-seven-top">
+                    <div class="mobile-seven-top-1" id="mobile-seventh-chair-1">1</div>
+                    <div class="mobile-seven-top-2" id="mobile-seventh-chair-2">2</div>
+                  </div>
+
+                  <div class="mobile-seven-middle" id="mobile-seventh-desk"><input type="checkbox" id="mobile-seventh-check">T-7</div>
+
+                  <div class="mobile-seven-bottom">
+                    <div class="mobile-seven-bottom-1" id="mobile-seventh-chair-3">3</div>
+                    <div class="mobile-seven-bottom-2" id="mobile-seventh-chair-4">4</div>
+                  </div>
+              </div>
+
+
+              <script>
+              const mobile_seven_checkbox     = document.getElementById('mobile-seventh-check');
+              const mobile_seven_top_one      = document.getElementById('mobile-seventh-chair-1');
+              const mobile_seven_top_two      = document.getElementById('mobile-seventh-chair-2');
+              const mobile_seven_middle       = document.getElementById('mobile-seventh-desk');
+              const mobile_seven_bottom_one   = document.getElementById('mobile-seventh-chair-3');
+              const mobile_seven_bottom_two   = document.getElementById('mobile-seventh-chair-4');
+
+
+              mobile_seven_checkbox.addEventListener('change', () => {
+                if (mobile_seven_checkbox.checked) 
+                {
+                  mobile_seven_top_one.style.borderTopColor       = '#007ab3';
+                  mobile_seven_top_two.style.borderTopColor       = '#007ab3';
+                  mobile_seven_middle.style.backgroundColor       = '#007ab3';
+                  mobile_seven_bottom_one.style.borderBottomColor = '#007ab3';
+                  mobile_seven_bottom_two.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_seven_top_one.style.borderTopColor       = '';
+                  mobile_seven_top_two.style.borderTopColor       = '';
+                  mobile_seven_middle.style.backgroundColor       = '';
+                  mobile_seven_bottom_one.style.borderBottomColor = '';
+                  mobile_seven_bottom_two.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+              <!-- seventh table end -->
+
+
+
+            <!-- fifth table start -->
+            <div class="mobile-fifth-table">
+              <div class="mobile-five-top" id="mobile-fifth-chair-1">1</div>
+
+              <div class="mobile-five-middle">
+                <div class="mobile-five-middle-1" id="mobile-fifth-chair-2">2</div>
+                <div class="mobile-five-middle-2" id="mobile-fifth-desk"><input type="checkbox" id="mobile-fifth-check">T-5</div>
+                <div class="mobile-five-middle-3" id="mobile-fifth-chair-3">3</div>
+              </div>
+
+              <div class="mobile-five-bottom" id="mobile-fifth-chair-4">4</div>
+            </div>
+
+
+            <script>
+              const mobile_five_checkbox     = document.getElementById('mobile-fifth-check');
+              const mobile_five_top          = document.getElementById('mobile-fifth-chair-1');
+              const mobile_five_middle_one   = document.getElementById('mobile-fifth-chair-2');
+              const mobile_five_middle_two   = document.getElementById('mobile-fifth-desk');
+              const mobile_five_middle_three = document.getElementById('mobile-fifth-chair-3');
+              const mobile_five_bottom       = document.getElementById('mobile-fifth-chair-4');
+
+              mobile_five_checkbox.addEventListener('change', () => {
+                if (mobile_five_checkbox.checked) {
+                  mobile_five_top.style.borderTopColor = '#007ab3';
+                  mobile_five_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_five_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_five_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_five_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_five_top.style.borderTopColor = '';
+                  mobile_five_middle_one.style.borderLeftColor = '';
+                  mobile_five_middle_two.style.backgroundColor = '';
+                  mobile_five_middle_three.style.borderRightColor = '';
+                  mobile_five_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- fifth table end -->
+
+
+
+            <!-- second table start -->
+              <div class="mobile-second-table">
+                <div class="mobile-two-top" id="mobile-second-chair-1">1</div>
+
+                <div class="mobile-two-middle">
+                  <div class="mobile-two-middle-1" id="mobile-second-chair-2">2</div>
+                  <div class="mobile-two-middle-2" id="mobile-second-desk"><input type="checkbox" id="mobile-second-check">T-2</div>
+                  <div class="mobile-two-middle-3" id="mobile-second-chair-3">3</div>
+                </div>
+
+                <div class="mobile-two-bottom" id="mobile-second-chair-4">4</div>
+              </div>
+
+
+              <script>
+              const mobile_two_checkbox     = document.getElementById('mobile-second-check');
+              const mobile_two_top          = document.getElementById('mobile-second-chair-1');
+              const mobile_two_middle_one   = document.getElementById('mobile-second-chair-2');
+              const mobile_two_middle_two   = document.getElementById('mobile-second-desk');
+              const mobile_two_middle_three = document.getElementById('mobile-second-chair-3');
+              const mobile_two_bottom       = document.getElementById('mobile-second-chair-4');
+
+              mobile_two_checkbox.addEventListener('change', () => {
+                if (mobile_two_checkbox.checked) {
+                  mobile_two_top.style.borderTopColor = '#007ab3';
+                  mobile_two_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_two_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_two_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_two_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_two_top.style.borderTopColor = '';
+                  mobile_two_middle_one.style.borderLeftColor = '';
+                  mobile_two_middle_two.style.backgroundColor = '';
+                  mobile_two_middle_three.style.borderRightColor = '';
+                  mobile_two_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+              <!-- second table end -->
+
+              <div class="entrance">
+                <p>Entrance</p>
+              </div>
+
+        </div>
+        <!-- column 2 end -->
+
+
+        <!-- column 1 start -->
+        <div class="column-1">
+
+            <!-- nine table start -->
+            <div class="mobile-ninth-table">
+              <div class="mobile-nine-top" id="mobile-ninth-chair-1">1</div>
+
+              <div class="mobile-nine-middle">
+                <div class="mobile-nine-middle-1" id="mobile-ninth-chair-2">2</div>
+                <div class="mobile-nine-middle-2" id="mobile-ninth-desk"><input type="checkbox" id="mobile-ninth-check">T-9</div>
+                <div class="mobile-nine-middle-3" id="mobile-ninth-chair-3">3</div>
+              </div>
+
+              <div class="mobile-nine-bottom" id="mobile-ninth-chair-4">4</div>
+            </div>
+
+            <script>
+              const mobile_nine_checkbox     = document.getElementById('mobile-ninth-check');
+              const mobile_nine_top          = document.getElementById('mobile-ninth-chair-1');
+              const mobile_nine_middle_one   = document.getElementById('mobile-ninth-chair-2');
+              const mobile_nine_middle_two   = document.getElementById('mobile-ninth-desk');
+              const mobile_nine_middle_three = document.getElementById('mobile-ninth-chair-3');
+              const mobile_nine_bottom       = document.getElementById('mobile-ninth-chair-4');
+
+              mobile_nine_checkbox.addEventListener('change', () => {
+                if (mobile_nine_checkbox.checked) {
+                  mobile_nine_top.style.borderTopColor = '#007ab3';
+                  mobile_nine_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_nine_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_nine_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_nine_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_nine_top.style.borderTopColor = '';
+                  mobile_nine_middle_one.style.borderLeftColor = '';
+                  mobile_nine_middle_two.style.backgroundColor = '';
+                  mobile_nine_middle_three.style.borderRightColor = '';
+                  mobile_nine_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- nine table end -->
+
+
+
+            <!-- six table start -->
+            <div class="mobile-sixth-table">
+
+              <div class="mobile-six-top">
+                <div class="mobile-six-top-1" id="mobile-sixth-chair-1">1</div>
+                <div class="mobile-six-top-2" id="mobile-sixth-chair-2">2</div>
+                <div class="mobile-six-top-3" id="mobile-sixth-chair-3">3</div>
+              </div>
+
+              <div class="mobile-six-middle">
+                  <div class="mobile-six-middle-1" id="mobile-sixth-chair-4">4</div>
+                  <div class="mobile-six-middle-2" id="mobile-sixth-desk"><input type="checkbox" id="mobile-sixth-check">T-6</div>
+                  <div class="mobile-six-middle-3" id="mobile-sixth-chair-5">5</div>
+              </div>
+                
+              <div class="mobile-six-bottom">
+                <div class="mobile-six-bottom-1" id="mobile-sixth-chair-6">6</div>
+                <div class="mobile-six-bottom-2" id="mobile-sixth-chair-7">7</div>
+                <div class="mobile-six-bottom-3" id="mobile-sixth-chair-8">8</div>
+              </div>
+
+            </div>
+
+
+            <script>
+              const mobile_six_checkbox     = document.getElementById('mobile-sixth-check');
+              const mobile_six_top_one      = document.getElementById('mobile-sixth-chair-1');
+              const mobile_six_top_two      = document.getElementById('mobile-sixth-chair-2');
+              const mobile_six_top_three    = document.getElementById('mobile-sixth-chair-3');
+              const mobile_six_middle_one   = document.getElementById('mobile-sixth-chair-4');
+              const mobile_six_middle_two   = document.getElementById('mobile-sixth-desk');
+              const mobile_six_middle_three = document.getElementById('mobile-sixth-chair-5');
+              const mobile_six_bottom_one   = document.getElementById('mobile-sixth-chair-6');
+              const mobile_six_bottom_two   = document.getElementById('mobile-sixth-chair-7');
+              const mobile_six_bottom_three = document.getElementById('mobile-sixth-chair-8');
+
+
+              mobile_six_checkbox.addEventListener('change', () => {
+                if (mobile_six_checkbox.checked) {
+                  mobile_six_top_one.style.borderTopColor = '#007ab3';
+                  mobile_six_top_two.style.borderTopColor = '#007ab3';
+                  mobile_six_top_three.style.borderTopColor = '#007ab3';
+                  mobile_six_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_six_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_six_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_six_bottom_one.style.borderBottomColor = '#007ab3';
+                  mobile_six_bottom_two.style.borderBottomColor = '#007ab3';
+                  mobile_six_bottom_three.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_six_top_one.style.borderTopColor = '';
+                  mobile_six_top_two.style.borderTopColor = '';
+                  mobile_six_top_three.style.borderTopColor = '';
+                  mobile_six_middle_one.style.borderLeftColor = '';
+                  mobile_six_middle_two.style.backgroundColor = '';
+                  mobile_six_middle_three.style.borderRightColor = '';
+                  mobile_six_bottom_one.style.borderBottomColor = '';
+                  mobile_six_bottom_two.style.borderBottomColor = '';
+                  mobile_six_bottom_three.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- six table end -->
+
+
+
+            <!-- three - four table start -->
+            <div class="mobile-three-four-table">
+
+              <!-- third table start -->
+              <div class="mobile-third-table">
+                <div class="mobile-three-top" id="mobile-third-chair-1">1</div>
+
+                  <div class="mobile-three-middle" id="mobile-third-desk"><input type="checkbox" id="mobile-third-check">T-3</div>
+
+                <div class="mobile-three-bottom" id="mobile-third-chair-2">2</div>
+              </div>
+
+              <script>
+              const mobile_three_checkbox  = document.getElementById('mobile-third-check');
+              const mobile_three_top       = document.getElementById('mobile-third-chair-1');
+              const mobile_three_middle    = document.getElementById('mobile-third-desk');
+              const mobile_three_bottom    = document.getElementById('mobile-third-chair-2');
+
+              mobile_three_checkbox.addEventListener('change', () => {
+                if (mobile_three_checkbox.checked) {
+                  mobile_three_top.style.borderTopColor = '#007ab3';
+                  mobile_three_middle.style.backgroundColor= '#007ab3';
+                  mobile_three_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_three_top.style.borderTopColor = '';
+                  mobile_three_middle.style.borderLeftColor = '';
+                  mobile_three_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+              <!-- third table end -->
+
+
+
+              <!-- fourth table start -->
+              <div class="mobile-fourth-table">
+                <div class="mobile-four-top" id="mobile-fourth-chair-1">1</div>
+
+                  <div class="mobile-four-middle" id="mobile-fourth-desk"><input type="checkbox" id="mobile-fourth-check">T-4</div>
+
+                <div class="mobile-four-bottom" id="mobile-fourth-chair-2">2</div>
+              </div>
+
+
+
+              <script>
+              const mobile_four_checkbox  = document.getElementById('mobile-fourth-check');
+              const mobile_four_top       = document.getElementById('mobile-fourth-chair-1');
+              const mobile_four_middle    = document.getElementById('mobile-fourth-desk');
+              const mobile_four_bottom    = document.getElementById('mobile-fourth-chair-2');
+
+              mobile_four_checkbox.addEventListener('change', () => {
+                if (mobile_four_checkbox.checked) {
+                  mobile_four_top.style.borderTopColor = '#007ab3';
+                  mobile_four_middle.style.backgroundColor= '#007ab3';
+                  mobile_four_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_four_top.style.borderTopColor = '';
+                  mobile_four_middle.style.backgroundColor = '';
+                  mobile_four_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+              <!-- fourth table end -->
+
+            </div>
+            <!-- three - four tables end -->
+
+
+
+            <!-- first table start -->
+            <div class="mobile-first-table">
+              <div class="mobile-one-top" id="mobile-first-chair-1">1</div>
+
+              <div class="mobile-one-middle">
+                <div class="mobile-one-middle-1" id="mobile-first-chair-2">2</div>
+                <div class="mobile-one-middle-2" id="mobile-first-desk"><input type="checkbox" id="mobile-first-check">T-1</div>
+                <div class="mobile-one-middle-3" id="mobile-first-chair-3">3</div>
+              </div>
+
+              <div class="mobile-one-bottom" id="mobile-first-chair-4">4</div>
+            </div>
+
+
+            <script>
+              const mobile_one_checkbox     = document.getElementById('mobile-first-check');
+              const mobile_one_top          = document.getElementById('mobile-first-chair-1');
+              const mobile_one_middle_one   = document.getElementById('mobile-first-chair-2');
+              const mobile_one_middle_two   = document.getElementById('mobile-first-desk');
+              const mobile_one_middle_three = document.getElementById('mobile-first-chair-3');
+              const mobile_one_bottom       = document.getElementById('mobile-first-chair-4');
+
+              mobile_one_checkbox.addEventListener('change', () => {
+                if (mobile_one_checkbox.checked) {
+                  mobile_one_top.style.borderTopColor = '#007ab3';
+                  mobile_one_middle_one.style.borderLeftColor = '#007ab3';
+                  mobile_one_middle_two.style.backgroundColor = '#007ab3';
+                  mobile_one_middle_three.style.borderRightColor = '#007ab3';
+                  mobile_one_bottom.style.borderBottomColor = '#007ab3';
+                }
+                else 
+                {
+                  mobile_one_top.style.borderTopColor = '';
+                  mobile_one_middle_one.style.borderLeftColor = '';
+                  mobile_one_middle_two.style.backgroundColor = '';
+                  mobile_one_middle_three.style.borderRightColor = '';
+                  mobile_one_bottom.style.borderBottomColor = '';
+                }
+
+              });
+            </script>
+            <!-- first table end -->
+
+        </div>
+        <!-- column 1 end -->
+        
+        </div>
+        <!-- sub child 2 end -->
+
+      </div>
+      <!-- child 2 end -->
+
+
+
+
+
+
+
+
+      <!-- seat - position start -->
+      <div class="seats-position">
+        <p><i class="fa-solid fa-chair" style="color: #007ab3;"></i> Seats : 4 | Table No : 6</p>
+        <p><i class="fa-solid fa-circle-play" style="color: #007ab3;"></i> Watch table Position</p>
+      </div>
+      <!-- seat - position end -->
+
+
+
+      <!-- button start -->
+      <a href="" class="add-card">Book Your Table</a>
+      <!-- button end -->
+
+    </div>
+    <!-- parent end -->
+
+</body>
+
+
+
+
+<script>
+    var two = document.getElementById("two-seat");
+    var three = document.getElementById("three-seat");
+    var four = document.getElementById("four-seat");
+    var five = document.getElementById("five-seat");
+    var six = document.getElementById("six-seat");
+
+    function two_seats(){
+        two.style.borderBottom = "2px solid #f39c12";    
+        three.style.borderBottom = "2px solid white";
+        four.style.borderBottom = "2px solid white";
+        four.style.color = "gray";
+        four.style.fontWeight = "unset"
+        five.style.borderBottom = "2px solid white";
+        six.style.borderBottom = "2px solid white";
+    }
+
+    function three_seats(){
+        two.style.borderBottom = "2px solid white";
+        three.style.borderBottom = "2px solid #f39c12";
+        four.style.borderBottom = "2px solid white";
+        four.style.color = "gray";
+        four.style.fontWeight = "unset"
+        five.style.borderBottom = "2px solid white";
+        six.style.borderBottom = "2px solid white";
+    }
+
+    function four_seats(){
+        two.style.borderBottom = "2px solid white";
+        three.style.borderBottom = "2px solid white";
+        four.style.borderBottom = "2px solid #f39c12";
+        four.style.color = "black";
+        four.style.fontWeight = "700"
+        five.style.borderBottom = "2px solid white";
+        six.style.borderBottom = "2px solid white";    
+    }
+
+    function five_seats(){
+        two.style.borderBottom = "2px solid white";
+        three.style.borderBottom = "2px solid white";
+        four.style.borderBottom = "2px solid white";
+        four.style.color = "gray";
+        four.style.fontWeight = "unset"
+        five.style.borderBottom = "2px solid #f39c12";
+        six.style.borderBottom = "2px solid white";
+    }
+    function six_seats(){
+        two.style.borderBottom = "2px solid white";
+        three.style.borderBottom = "2px solid white";
+        four.style.borderBottom = "2px solid white";
+        four.style.color = "gray";
+        four.style.fontWeight = "unset"
+        five.style.borderBottom = "2px solid white";
+        six.style.borderBottom = "2px solid #f39c12";
+           
+    }
+</script>
+
+<script>
+
+  var all_btn = document.getElementById("all-btn");
+  var available_btn = document.getElementById("available-btn");
+  var booked_btn = document.getElementById("booked-btn");
+
+  
+
+  function all_table()
+  {
+    all_btn.style.backgroundColor = "white";
+    all_btn.style.color = "#4d0089";
+    all_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    all_btn.style.fontWeight = "700";
+
+    available_btn.style.backgroundColor = "#4d0089";
+    available_btn.style.color = "white";
+    available_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    available_btn.style.fontWeight = "unset";
+
+    booked_btn.style.backgroundColor = "#4d0089";
+    booked_btn.style.color = "white";
+    booked_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    booked_btn.style.fontWeight = "unset";
+  }
+
+  function available()
+  {
+    available_btn.style.backgroundColor = "white";
+    available_btn.style.color = "#4d0089";
+    available_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    available_btn.style.fontWeight = "700";
+
+    all_btn.style.backgroundColor = "#4d0089";
+    all_btn.style.color = "white";
+    all_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    all_btn.style.fontWeight = "unset";
+
+    booked_btn.style.backgroundColor = "#4d0089";
+    booked_btn.style.color = "white";
+    booked_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    booked_btn.style.fontWeight = "unset";
+  }
+
+   function booked()
+  {
+    booked_btn.style.backgroundColor = "white";
+    booked_btn.style.color = "#4d0089";
+    booked_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    booked_btn.style.fontWeight = "700";
+
+    all_btn.style.backgroundColor = "#4d0089";
+    all_btn.style.color = "white";
+    all_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    all_btn.style.fontWeight = "unset";
+
+    available_btn.style.backgroundColor = "#4d0089";
+    available_btn.style.color = "white";
+    available_btn.style.boxShadow = "2px 2px 10px rgba(0,0,0,0.1)";
+    available_btn.style.fontWeight = "unset";    
+  }
+
+
+</script>
+
+
+
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABLE BOOKING</title>
+
+    <!-- style sheet  -->
+    <link rel="stylesheet" href="style.css">
+    <!-- style sheet  -->
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- google font  -->
+
+    <!-- fontawesome  -->
+    <script src="https://kit.fontawesome.com/4b4d66f7f6.js" crossorigin="anonymous"></script>
+    <!-- fontawesome  -->
+
+    <!-- bootsrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- bootsrap  -->
+
+</head>
+
+<body>
+
+    <!-- parent start  -->
+    <div class="parent">
+
+      <!-- child 1 start  -->
+        <div class="child-1">
+
+          <!-- top child 1 start -->
+            <div class="top-child-1">
+              <a href="../index.html" class="top-child-text-1">〱</a>
+                <p class="top-child-text-2">♡</p>
+            </div>
+            <!-- top child 1 end -->
+
+
+
+            <!-- middle child 1 start -->
+            <div class="middle-child-1">
+                <div class="image">
+                    <img src="./Images/pizza.png" alt="">
+                </div>
+
+                <p class="middle-child-text-1">Melting Cheese Pizza</p>
+                <p class="middle-child-text-2"><i class="fa-solid fa-pizza-slice"></i> Pizza italiano</p>
+                <p class="middle-child-text-3"><span><i class="fa-regular fa-clock"></i> 15 Mins</span><span class="dot"> • </span><span class="four-eight">⭐ 4.8 </span><span class="two-two">(2.2k reviews)</span></p>
+                
+                <div class="three-radio">
+
+                    <div class="one-radio" id="first">
+                        <input type="radio" name="food" id="small">
+                        <p class="middle-child-text-4">small 8+</p>
+                        <p class="middle-child-text-5">$9.99</p>
+                    </div>
+
+                    <div class="one-radio" id="second">
+                        <input type="radio" name="food" id="medium">
+                        <p class="middle-child-text-4">medium 12+</p>
+                        <p class="middle-child-text-5">$12.99</p>
+                    </div>
+
+                    <div class="one-radio" id="three">
+                        <input type="radio" name="food" id="large">
+                        <p class="middle-child-text-4">large 18+</p>
+                        <p class="middle-child-text-5">$16.99</p>
+                    </div>
+
+                </div>
+
+                <p class="middle-child-text-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, eaque quia, quaerat corporis, quis molestiae impedit magni cum earum quod dolorum consequuntur sunt est. Enim, obcaecati rem! Error, delectus commodi!</p>
+
+            </div>
+            <!-- middle child 1 end -->
+
+
+
+            <!-- bottom child 1 start -->
+            <div class="bottom-child-1">
+                <div class="total-box">
+                    <p class="bottom-child-text-1">Total : <span class="dollar">$</span>12.99</p>
+                    <div class="plus-minus">
+                        <button class="bottom-child-text-2"  onclick="decrease()">-</button>
+                        <p class="bottom-child-text-3" id="value">1</p>
+                        <button class="bottom-child-text-2" onclick="increase()">+</button>
+                    </div>
+                </div>
+
+                <a href="../TABLE PAGE 3/third.html" class="bottom-child-text-4">NEXT</a>
+            </div>
+            <!-- bottom child 1 end -->
+            
+        </div>
+        <!-- child 1 end -->
+        
+    </div>
+    <!-- parent end -->
+
+</body>
+
+<!-- script code start -->
+  <script>
+    const radios = document.querySelectorAll('input[name="food"]');
+    const containers = document.querySelectorAll('.one-radio');
+
+    radios.forEach((radio, index) => {
+      radio.addEventListener('change', () => {
+        containers.forEach(container => container.classList.remove('selected'));
+        if (radio.checked) {
+          containers[index].classList.add('selected');
+        }
+      });
+    });
+  </script>
+
+
+  <script>
+    let count = 1;
+
+    function updateDisplay() {
+      document.getElementById("value").textContent = count;
+    }
+
+    function increase() {
+      count++;
+      updateDisplay();
+    }
+
+    function decrease() {
+      if (count > 0) {  // Optional: Prevent going below 0
+        count--;
+        updateDisplay();
+      }
+    }
+  </script>
+  <!-- script code end -->
+
+
+
+</html>
